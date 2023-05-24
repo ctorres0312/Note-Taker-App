@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scribble Notes</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    
+<div class="notes" id="app">
+    <div class="notes-sidebar">
+        <button class="notes-add" type="button">Add Note</button>
+            <div class="notes-list">
+                <div class="notes-list-item notes-list-item-selected">
+                    <div class="notes-small-title">Lecture Notes</div>
+                    <div class="notes-small-body">I learnt nothing today.</div>
+                    <div class="notes-small-updated">Wednesday 2:45pm</div>
+                    <button class="notes-delete" type="button">Delete Note</button>
+                    </div>
+                </div>
+            </div>
+            <div class="notes-preview">
+                <input class="notes-title" type="text" placeholder="Enter Title">
+                <textarea class="notes-body">I am the notes body...</textarea>
+            </div>
+</div>
+    <script src="./js/main.js" type="module"></script>
+</body>
+</html>
