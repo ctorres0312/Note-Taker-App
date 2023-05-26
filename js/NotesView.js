@@ -41,7 +41,7 @@ export default class NotesView {
 
         console.log(this._createListItemHTML(300, "Hey", "Yeah mate", new Date()));
         //todo: hide the note preview by default        
-
+            this.updateNotePreviewVisibility(false);
 
     }
 
@@ -105,8 +105,12 @@ this.root.querySelectorAll(".notes-list-item").forEach(noteListItem => {
     noteListItem.classList.remove("notes-list-item-selected")
 });
 
-this.root.querySelector(`.notes-list-item[data-note-id="${note.id}"]`)
+this.root.querySelector(`.notes-list-item[data-note-id="${note.id}"]`).classList.add("notes-list-item-selected");
 
+    }
+
+    updateNotePreviewVisibility(visible) {
+        this.root.querySelector(".notes-preview").style.visibility = visible ? "visible" : "hidden";
     }
 
 }
