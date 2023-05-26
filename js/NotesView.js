@@ -11,7 +11,6 @@ export default class NotesView {
         <div class="notes-sidebar">
             <button class="notes-add" type="button">Add Note</button>
                 <div class="notes-list"> </div>  
-            <button class="notes-delete" type="button">Delete Note</button>
         </div>
         <div class="notes-preview">
                 <input class="notes-title" type="text" placeholder="New Note...">
@@ -22,9 +21,8 @@ export default class NotesView {
         const btnAddNote = this.root.querySelector('.notes-add');
         const inpTitle = this.root.querySelector('.notes-title');
         const inpBody = this.root.querySelector('.notes-body');
-        const btnDeleteNote = this.root.querySelector('.notes-delete');
 
-        btnAddNote.addEventListener('click', () => {
+        btnAddNote.addEventListener("click", () => {
             this.onNoteAdd();
         });
 
@@ -38,9 +36,6 @@ export default class NotesView {
         });
 
 
-
-        console.log(this._createListItemHTML(300, "Hey", "Yeah mate", new Date()));
-        //todo: hide the note preview by default        
             this.updateNotePreviewVisibility(false);
 
     }
@@ -56,7 +51,7 @@ export default class NotesView {
                     ${body.length > MAX_BODY_LENGTH ? "..." : ""}
                 </div>
                 <div class="notes-small-updated">
-                ${updated.toLocaleString(undefined, { dateStyle: "full", timeStyle: "short"})}
+                ${updated.toLocaleString(undefined, { dateStyle: "full", timeStyle: "short" })}
                 </div>
             </div>
         `;
@@ -90,7 +85,7 @@ export default class NotesView {
                 if (doDelete) {
                     this.onNoteDelete(noteListItem.dataset.noteId);
                 }
-            })
+            });
         });
 
         

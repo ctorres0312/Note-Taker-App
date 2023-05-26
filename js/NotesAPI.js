@@ -22,7 +22,7 @@ export default class NotesAPI {
             existing.updated = new Date().toISOString();
         } else {
         noteToSave.id = Math.floor(Math.random() * 1000000);
-        noteToSave.updated = new Date().toISOString;
+        noteToSave.updated = new Date().toISOString();
         notes.push(noteToSave);
         }
 
