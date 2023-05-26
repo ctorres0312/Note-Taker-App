@@ -22,7 +22,7 @@ body {
 }
 
 .notes__add {
-    background: #009578;
+    background: #085e97;
     border: none;
     border-radius: 7px;
     color: #ffffff;
@@ -35,7 +35,7 @@ body {
 }
 
 .notes__add:hover {
-    background: #00af8c;
+    background: #1c82d5;
 }
 
 .notes__list-item {
